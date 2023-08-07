@@ -1,0 +1,21 @@
+<section class="app-budget-item-section d-flex justify-content-center mt-2">
+    <div class="app-budget-item-container col-8 mx-auto my-auto text-center">
+        <hr>
+
+        <div class="row">
+            <div class="col-4 d-flex flex-column flex-grow-1 text-start income-column">
+                <h3 class="text-success fs-4">Income</h3>
+                <div *ngFor="let item of budgetItems">
+                    <app-budget-item-card *ngIf="item.amount! >= 0" [budgetItem]="item" (deleteButtonClick)="delete(item)" (cardClick)="onCardClicked($event)"></app-budget-item-card>
+                </div>
+            </div>
+        
+            <div class="col-4 d-flex flex-column flex-grow-1 text-start expenses-column">
+                <h3 class="text-danger fs-4">Expenses</h3>
+                <div *ngFor="let item of budgetItems">
+                    <app-budget-item-card *ngIf="item.amount! < 0" [budgetItem]="item" (deleteButtonClick)="delete(item)" (cardClick)="onCardClicked($event)"></app-budget-item-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

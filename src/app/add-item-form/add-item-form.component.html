@@ -1,0 +1,15 @@
+<section class="add-items-section d-flex justify-content-center mt-4">
+    <div class="add-item-container mx-auto my-auto text-center" [ngClass]="{'col-8': !edit, 'col-12': edit}">
+        <form action="" #itemForm="ngForm" (ngSubmit)="onSubmit(itemForm)">
+            <div class="row">
+                <div class="col-2 mt-0">
+                    <input type="number" class="form-control" name="amount" id="amount" placeholder="Amount" [ngModel]="item.amount" required>
+                </div>
+                <div class="col-10 d-flex">
+                    <input type="text" class="form-control" name="description" id="description" placeholder="Description" [ngModel]="item.description" required>
+                    <button type="submit" class="btn mx-2" [ngClass]="{'disabled': !itemForm.valid, 'btn-success': edit}" [disabled]="!itemForm.valid">{{edit ? 'Update' : 'Add'}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>

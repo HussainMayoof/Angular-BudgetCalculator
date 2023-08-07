@@ -1,0 +1,44 @@
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+
+.budget-item {
+    height: 50px;
+}
+
+.description {
+    align-items: center;
+}
+
+.amount {
+    width: auto;
+}
+
+:hover {
+    .delete-button {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .bg-body-secondary {
+        background-color: $secondary-bg-subtle !important;
+        transition: all 0.2s ease-out;
+    }
+}
+
+.delete-button {
+    width: 34px;
+    height: 34px;
+    right: -17px;
+    top: -17px;
+    background-image: url('../../../assets/delete_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(0);
+    transition: opacity 0.2s ease-in, transform 0.2s ease-out;
+    cursor: pointer;
+
+    :hover {
+        transform: scale(1.2);
+    }
+}
+

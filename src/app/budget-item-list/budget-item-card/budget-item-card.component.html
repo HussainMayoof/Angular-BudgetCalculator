@@ -1,0 +1,12 @@
+<div class="position-relative budget-item-container">
+    <div class="d-flex bg-body-secondary rounded mx-1 mb-2 row budget-item" role="button" (click)="cardClicked(budgetItem)">
+        <div class="description col-10 d-flex flex-grow-1 pb-2">
+            <p [ngClass]="{'text-success-emphasis': budgetItem.amount! >= 0, 'text-danger-emphasis': budgetItem.amount! < 0}" class="mb-0">{{budgetItem.description}}</p>
+        </div>
+        <div class="amount col-2 d-flex pt-2">
+            <p [ngClass]="{'bg-success-subtle text-success': budgetItem.amount! >= 0 === true, 'bg-danger-subtle text-danger': budgetItem.amount! < 0}" class=" rounded-3 p-xl-1">{{budgetItem.amount}}</p>
+        </div>
+    </div>
+    
+    <div class="delete-button position-absolute bg-dark rounded-circle" (click)="deleteButtonClicked()"></div>
+</div>

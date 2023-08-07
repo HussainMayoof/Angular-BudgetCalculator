@@ -1,0 +1,13 @@
+<div class="container-fluid px-0 mx-0">
+    <div class="top-bar col-12 d-flex">
+        <h1 class="fs-5 fw-bolder mx-auto my-auto">Budget Calculator</h1>
+    </div>
+
+    <section class="total-budget-section col-12 d-flex bg-dark">
+        <h2 class="fw-light fs-1 mx-auto my-auto" [ngClass]="{'text-danger': totalAmount < 0, 'text-success': totalAmount >= 0}">{{totalAmount}}</h2>
+    </section>
+
+    <app-add-item-form [edit]="false" (formSubmit)="addItem($event)"></app-add-item-form>
+
+    <app-budget-item-list [budgetItems]="budgetItems" (deleteItem)="delete($event)" (updateItem)="updateItem($event)"></app-budget-item-list>
+</div>

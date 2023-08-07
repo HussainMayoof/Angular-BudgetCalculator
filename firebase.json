@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "budget-calculator",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "budget-calculator-d8eb9": {
+      "hosting": {
+        "budget-calculator": [
+          "budgetcalculator"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "budget-calculator-d8eb9"
+  }
+}
